@@ -7,21 +7,61 @@
 }
 
 #hero h1 {
+    position: relative;
+    z-index: 10;
     margin-bottom: 0;
-    font-size: 96px;
     text-align: center;
 }
 
 #hero p {
+    position: relative;
+    z-index: 10;
     margin: 50px 0px;
     text-align: center;
     font-weight: bold;
-    font-size: 25px;;
+    font-size: 25px;
 }
 
 #hero button {
-    font-size: 20px;
+    position: relative;
+    z-index: 10;
 }
+
+#cat-signal {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 1600px;
+    height: 630px;
+    z-index: 1;
+
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+    animation-name: fade-out;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root);
+    animation-range: exit 0% exit 20%; 
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#catlouette {
+    position: absolute;
+    top: 180px;
+    left: 50;
+    height: 450px;
+    width: 750px;
+    z-index: 2;
+}
+
 
 /* about us section */
 #about, #adopt, #partner {
@@ -74,18 +114,62 @@
     gap: 50px;
 }
 
+#cat-carousel button {
+    padding: 10px 20px;
+
+}
+
 #carousel {
     display: flex;
+    align-items: center;
     gap: 50px;
 }
 
 .carousel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 290px;
-    height: 390px;
+    /* height: 425px; */
     background-color: var(--color-card);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: 30px;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+.carousel-card h3 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.carousel-card p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.carousel-card #name-age {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-card button {
+    align-self: center;
+    margin-top: 10px;
+}
+
+.carousel-card hr {
+    width: 100%; 
+    border: 0.5px solid gray;
+    margin: 0;
 }
 
 #partner {
