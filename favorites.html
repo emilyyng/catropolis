@@ -25,13 +25,14 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./cats.html">Meet The Cats</a></li>
                 <li><a href="./faq.html">FAQ</a></li>
-                <li><a href="./favorites.html"><3</a></li>
-                <li>settings</li>
+                <div class="current-page"><li><a href="./favorites.html"><3</a></li></div>
+                <!-- <li>settings</li> -->
             </ul>
         </nav>
         <div id="hero">
             <h1>favorites</h1>
         </div>
+        <div id="fav-cats"></div>
 
         <!-- footer -->
         <footer>
@@ -44,7 +45,7 @@
                     catropolis helps cats find their furr-ever homes. 
                     subscribe to our newsletter to get alerts about our cats. 
                 </p>
-                <a href="www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
                 <a href="https://github.com/emilyyng"><img src="./images/github.png" alt="linkedin logo"/></a>
                 <hr>
                 <p>&copy; 2026 catropolis. all rights reserved.</p>
@@ -57,16 +58,17 @@
                     <a>click here to see an example of what we include in our weekly 
                     emails.</a>
                 </p>
-                <form>
+                <form id="newsletter" title="newletter">
                     <label for="name">name</label>
                     <input type="text" id="name">
                     <label for="email">email</label>
                     <input type="text" id="email">
-                    <button>subscribe</button>
+                    <button id="subscribe-btn">subscribe</button>
                 </form>
             </div>
         </footer>
         <script src="script.js"></script>
+        <script src="fav.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
     </body>
 </html>
