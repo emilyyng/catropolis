@@ -22,15 +22,15 @@
             <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
             <ul>
                 <li><a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
+                <div class="current-page"><li><a href="./about.html">About</a></li></div>
                 <li><a href="./cats.html">Meet The Cats</a></li>
                 <li><a href="./faq.html">FAQ</a></li>
                 <li><a href="./favorites.html"><3</a></li>
-                <li>settings</li>
+                <!-- <li>settings</li> -->
             </ul>
         </nav>
-        <div id="main">
-            <div id="text">
+        <div id="main-about">
+            <div id="about-text">
                 <h1>about</h1>
                 <p id="subheading">learn more about catropolis!</p>
                 <h2>who we are</h2>
@@ -54,8 +54,9 @@
                 <h2>features we'd love to add to the website</h2>
                 <ul>
                     <li>incorporation of accounts for shelters and those looking to adopt</li>
+                    <li>mobile compatibility</li>
                     <li>animations of cats instead of only pictures</li>
-                    <li>a cat video game</li>
+                    <li>a cat game (as an easter egg)</li>
                 </ul>
                 <h2>fun facts the creator loves about cats</h2>
                 <ul>
@@ -79,7 +80,7 @@
                     catropolis helps cats find their furr-ever homes. 
                     subscribe to our newsletter to get alerts about our cats. 
                 </p>
-                <a href="www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
                 <a href="https://github.com/emilyyng"><img src="./images/github.png" alt="linkedin logo"/></a>
                 <hr>
                 <p>&copy; 2026 catropolis. all rights reserved.</p>
@@ -92,12 +93,12 @@
                     <a>click here to see an example of what we include in our weekly 
                     emails.</a>
                 </p>
-                <form>
+                <form id="newsletter" title="newletter">
                     <label for="name">name</label>
                     <input type="text" id="name">
                     <label for="email">email</label>
                     <input type="text" id="email">
-                    <button>subscribe</button>
+                    <button id="subscribe-btn">subscribe</button>
                 </form>
             </div>
         </footer>

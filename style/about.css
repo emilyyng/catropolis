@@ -19,7 +19,7 @@ h2 {
     margin-top: 20px;
 }
 
-#main p {
+#main-about p {
     margin: 0px;
     margin-bottom: 20px;
     /* padding-right: 400px; */
@@ -29,18 +29,34 @@ h2 {
     padding-right: 400px;
 } */
 
-#main {
+#main-about {
     display: flex;
 }
 
-#main #text{
+#about-text{
     z-index: 10;
     padding-right: 400px;
 }
 
+#about-text ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+#about-text li {
+  background-image: url('../images/catpoint.png');
+  background-repeat: no-repeat; 
+  background-position: 2px 7px; 
+  background-size: 16px 16px; 
+  padding-left: 25px; 
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 #catpunzel {
     position: absolute;
-    top: 120px;
+    top: 125px;
     left: 700px;
     z-index: 1;
     height: 1550px;
