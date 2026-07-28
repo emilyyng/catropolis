@@ -22,12 +22,12 @@
         <nav>
             <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
             <ul>
-                <li><a href="./home.html">Home</a></li>
+                <div class="current-page"><li><a href="./home.html">Home</a></li></div>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./cats.html">Meet The Cats</a></li>
                 <li><a href="./faq.html">FAQ</a></li>
                 <li><a href="./favorites.html"><3</a></li>
-                <li>settings</li>
+                <!-- <li>settings</li> -->
             </ul>
         </nav>
 
@@ -81,7 +81,7 @@
                             <p class="breed"></p>
                             <hr>
                             <p class="sex"></p>
-                            <button> + add to favorites</button>
+                            <button class="fav-btn"> + add to favorites</button>
                         </div>
                         <div class="carousel-card">
                             <img/>
@@ -92,7 +92,7 @@
                             <p class="breed"></p>
                             <hr>
                             <p class="sex"></p>
-                            <button> + add to favorites</button>
+                            <button class="fav-btn"> + add to favorites</button>
                         </div>
                         <div class="carousel-card">
                             <img/>
@@ -103,7 +103,7 @@
                             <p class="breed"></p>
                             <hr>
                             <p class="sex"></p>
-                            <button> + add to favorites</button>
+                            <button class="fav-btn"> + add to favorites</button>
                         </div>
                     </div>
                     <button id="next-btn">&#8250;</button>
@@ -201,7 +201,7 @@
                     catropolis helps cats find their furr-ever homes. 
                     subscribe to our newsletter to get alerts about our cats. 
                 </p>
-                <a href="www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
                 <a href="https://github.com/emilyyng"><img src="./images/github.png" alt="linkedin logo"/></a>
                 <hr>
                 <p>&copy; 2026 catropolis. all rights reserved.</p>
@@ -214,13 +214,14 @@
                     <a>click here to see an example of what we include in our weekly 
                     emails.</a>
                 </p>
-                <form>
+                <form id="newsletter" title="newletter">
                     <label for="name">name</label>
                     <input type="text" id="name">
                     <label for="email">email</label>
                     <input type="text" id="email">
-                    <button>subscribe</button>
+                    <button id="subscribe-btn">subscribe</button>
                 </form>
+                <div class="sub-confirmation">successfully subscribed to newsletter!</div>
             </div>
         </footer>
         <script src="script.js"></script>
