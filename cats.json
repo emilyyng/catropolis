@@ -7,6 +7,7 @@
         "breed": "domestic short hair",
         "color": "dilute calico",
         "s/n": "spayed", 
+        "shelter": "bay area cats",
         "favorited": false
     },
     {
@@ -17,6 +18,7 @@
         "breed": "domestic short hair",
         "color": "tuxedo",
         "s/n": "neutered", 
+        "shelter": "whiskerwood haven",
         "favorited": false
     },
     {
@@ -27,6 +29,7 @@
         "breed": "domestic short hair",
         "color": "tabby",
         "s/n": "spayed", 
+        "shelter": "sf spca",
         "favorited": false
     },
     {
@@ -37,6 +40,7 @@
         "breed": "domestic short hair",
         "color": "tabby",
         "s/n": "spayed", 
+        "shelter": "milo foundation",
         "favorited": false
     },
     {
@@ -47,6 +51,7 @@
         "breed": "domestic short hair",
         "color": "orange",
         "s/n": "neutered", 
+        "shelter": "give me shelter cat rescue",
         "favorited": false
     },
 
@@ -58,6 +63,7 @@
         "breed": "domestic short hair",
         "color": "calico",
         "s/n": "spayed", 
+        "shelter": "cat town oakland",
         "favorited": false
     },
     {
@@ -68,6 +74,7 @@
         "breed": "domestic short hair",
         "color": "orange",
         "s/n": "neutered", 
+        "shelter": "whiskerwood haven",
         "favorited": false
     },
     {
@@ -78,6 +85,7 @@
         "breed": "domestic short hair",
         "color": "tabby",
         "s/n": "spayed", 
+        "shelter": "sf spca",
         "favorited": false
     },
     {
@@ -88,6 +96,7 @@
         "breed": "domestic short hair",
         "color": "dilute tortoiseshell",
         "s/n": "spayed", 
+        "shelter": "bay area cats",
         "favorited": false
     }
 ]

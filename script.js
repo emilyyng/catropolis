@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.querySelector("h3").textContent = cat.name;
             card.querySelector(".age").textContent = `${cat.age}`;
             card.querySelector(".breed").innerHTML = `<strong>breed:</strong> ${cat.breed}`;
-            card.querySelector(".sex").innerHTML = `<strong>sex:</strong> ${cat.sex} (${cat["s/n"]})`;
+            card.querySelector(".sex").innerHTML = `<strong>sex:</strong> ${cat.sex} · ${cat["s/n"]}`;
 
             // --- FAVORITES LOGIC FOR CAROUSEL ---
             const isFavorited = favorites.some(fav => fav.name === cat.name);
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
           <p class="breed">${cat.breed}</p>
           <hr>
-          <p class="sex">${cat.sex}</p>
+          <p class="sex">${cat.sex} · ${cat["s/n"]}</p>
           <button class="fav-btn" ${isFavorited ? "disabled" : ""}>
             ${isFavorited ? "✓ favorited!" : "+ add to favorites"}
           </button>
