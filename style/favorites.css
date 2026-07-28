@@ -9,3 +9,11 @@
     margin-bottom: 0;
     text-align: center;
 }
+
+#fav-cats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; 
+    width: 100%;
+    gap: 50px;
+}
