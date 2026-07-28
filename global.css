@@ -223,6 +223,25 @@ footer form button {
   background-color: pink;
 }
 
+.sub-confirmation {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(180, 222, 180);
+    border-radius: 5px;
+    padding: 15px 20px;
+    z-index: 20;
+
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sub-confirmation.hidden {
+  opacity: 0;
+  transform: translate(-50%, -20px); /* Slides up out of view */
+  pointer-events: none; /* Prevents clicks while hidden */
+}
+
 
 /* variables  */
 :root {

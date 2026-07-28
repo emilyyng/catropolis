@@ -202,8 +202,17 @@ const validateForm = (event) => {
 
     if (containsErrors == false) {
         for (let i = 0; i < newsInputs.length; i++) {
-            newsInputs[i].value = ""
+            if (newsInputs[i].tagName !== "BUTTON") {
+                newsInputs[i].value = "";
+            }
         }
+
+        // subscribed to newsletter popup
+        const popup = document.getElementById('timed-popup');
+        popup.classList.remove('hidden');
+        setTimeout(() => {
+        popup.classList.add('hidden');
+        }, 3000); 
     }
 }
 subButton.addEventListener('click', validateForm);
