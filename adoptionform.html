@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="./style/form.css">
+        <title>adoption form</title>
+    </head>
+    <body>
+        <div id="main">
+            <h1>adoption form</h1>
+            <p>please fill out the following information. catropolis uses this form 
+                to let an organization know your interest in adopting a cat. they 
+                will contact you with next steps once you submit this form.
+            </p>
+            <form id="adoption-form" title="adoption-form">
+                <label for="name">your full name (first and last)</label>
+                <input type="text" id="name">
+                <label for="email">email</label>
+                <input type="email" id="email">
+                <label for="phone">phone number</label>
+                <input type="text" id="phone">
+                <label for="cat-name">name of cat you are interested in adopting</label>
+                <input type="text" id="cat-name">
+                <label for="shelters">shelter (responsible for cat)</label>
+                <select id="our-shelters" name="shelters" required>
+                    <option value="" disabled selected hidden> -- select -- </option>
+                    <option value="bay-area-cats">bay area cats</option>
+                    <option value="cat-town">cat town oakland</option>
+                    <option value="give-me-shelter">give me shelter cat rescue</option>
+                    <option value="milo">milo foundation</option>
+                    <option value="sfspca">sf spca</option>
+                    <option value="whiskerwood-haven">whiskerwood haven</option>
+                </select>
+                <button type="button" id="submit-btn">submit</button>
+                <div id="timed-popup" class="sub-confirmation hidden">successfully submitted!</div>
+            </form>
+        </div>
+        <script src="adoption.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
