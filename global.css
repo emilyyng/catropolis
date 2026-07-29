@@ -198,7 +198,7 @@ a {
   display: flex; 
 }
 
-#cat-profile #bar {
+#bar {
     position: fixed;
     z-index: 20;
     top: 0;
@@ -208,7 +208,7 @@ a {
     background-color: var(--color-border);
 }
 
-#close-profile {
+#close-profile, #close-register {
     position: fixed;
     z-index: 20;
     top: 15px;
@@ -227,7 +227,7 @@ a {
     padding-bottom: 50px;
 }
 
-#profile-content h1 {
+#profile-content h2 {
     font-size: 70px;
     margin: 0;
 }

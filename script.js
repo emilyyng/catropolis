@@ -293,3 +293,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
   subButton.addEventListener('click', validateForm);
 });
+
+// ==========================================
+// 5. REGISTER ORGANIZATION MODAL & FORM
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const registerModal = document.getElementById("register");
+    const getStartedBtn = document.querySelector("#partner-text button");
+    const closeBtn = document.getElementById("close-register");
+    const submitBtn = document.getElementById("submit-btn");
+    const form = document.getElementById("register-form");
+
+    // 1. Open Modal when clicking "Get Started" in Partner section
+    if (getStartedBtn && registerModal) {
+        getStartedBtn.addEventListener("click", () => {
+            registerModal.classList.add("open");
+        });
+    }
+
+    // 2. Close Modal when clicking the "x" button
+    if (closeBtn && registerModal) {
+        closeBtn.addEventListener("click", () => {
+            registerModal.classList.remove("open");
+        });
+    }
+
+    // 3. Form Validation & Submission Logic
+    if (submitBtn && form) {
+        submitBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            let containsErrors = false;
+
+            const nameInput = document.getElementById("reg-name") || document.getElementById("name");
+            const emailInput = document.getElementById("reg-email") || document.getElementById("email");
+            const phoneInput = document.getElementById("reg-phone") || document.getElementById("phone");
+
+            // Validate Name (at least 2 characters)
+            if (nameInput) {
+                if (nameInput.value.trim().length < 2) {
+                    containsErrors = true;
+                    nameInput.classList.add("error");
+                } else {
+                    nameInput.classList.remove("error");
+                }
+            }
+
+            // Validate Email (must contain @ and .)
+            if (emailInput) {
+                const emailVal = emailInput.value.trim();
+                if (emailVal.length < 5 || !emailVal.includes("@") || !emailVal.includes(".")) {
+                    containsErrors = true;
+                    emailInput.classList.add("error");
+                } else {
+                    emailInput.classList.remove("error");
+                }
+            }
+
+            // Validate Phone Number (must have at least 10 digits/characters)
+            if (phoneInput) {
+                if (phoneInput.value.trim().length < 10) {
+                    containsErrors = true;
+                    phoneInput.classList.add("error");
+                } else {
+                    phoneInput.classList.remove("error");
+                }
+            }
+
+            // If validation passes
+            if (!containsErrors) {
+                // Clear input fields
+                if (nameInput) nameInput.value = "";
+                if (emailInput) emailInput.value = "";
+                if (phoneInput) phoneInput.value = "";
+
+                // Show submission banner inside modal
+                const popup = document.getElementById("register-timed-popup") || document.getElementById("timed-popup");
+                if (popup) {
+                    popup.classList.remove("hidden");
+                    
+                    // Hide banner and close modal after 2.5 seconds
+                    setTimeout(() => {
+                        popup.classList.add("hidden");
+                        if (registerModal) {
+                            registerModal.classList.remove("open");
+                        }
+                    }, 2500);
+                } else if (registerModal) {
+                    // Fallback close if no popup found
+                    registerModal.classList.remove("open");
+                }
+            }
+        });
+    }
+});
