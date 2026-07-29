@@ -24,7 +24,7 @@ nav {
     left: 0;
     background-color: var(--color-navbar);
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav ul{
@@ -125,6 +125,23 @@ a {
     animation-range: exit 0% exit 20%; 
 }
 
+.cat-art {
+    position: absolute;
+    backface-visibility: hidden; 
+    cursor: pointer;
+}
+
+.cat-art:hover {
+    animation: jiggle 0.3s 3 linear;
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -221,6 +238,25 @@ a {
     font-weight: normal;
 }
 
+#overlay {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 #profile-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -255,7 +291,7 @@ footer {
     padding: 40px;
     gap: 50px;
     margin-top: 100px;
-    z-index: 10;
+    z-index: 8;
 }
 
 footer h3 {
@@ -331,6 +367,19 @@ footer form button {
   opacity: 0;
   transform: translate(-50%, -20px); /* Slides up out of view */
   pointer-events: none; /* Prevents clicks while hidden */
+}
+
+.revealable {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+  margin: 0; 
+}
+
+.active-scroll {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 

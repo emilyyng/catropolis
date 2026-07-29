@@ -18,6 +18,8 @@
         <title>meet the cats | catropolis</title>
     </head>
     <body>
+        <audio id="meowAudio" src="./meow.mp3"></audio>
+        <div id="overlay"></div>
         <nav>
             <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
             <ul>
@@ -37,6 +39,12 @@
                 adoption application for them. happy cat hunting!
             </p>
             <button>adoption form &#8594;</button>
+        </div>
+
+        <!-- art -->
+        <div id="cat-art">
+            <img class="cat-art" id="fatty-art" onClick="playMeow()" src="./images/art/fatty.png" alt="fat cat art"/>
+            <img class="cat-art" id="pihckle-art" onClick="playMeow()" src="./images/art/pihckle.png" alt="cat with three pickles art"/>
         </div>
 
         <div id="cat-profile">

@@ -24,3 +24,19 @@
     width: 100%;
     gap: 50px;
 }
+
+
+
+
+/* cat art */
+#fatty-art {
+    width: 180px;
+    top: 20%;
+    left: 5%;
+}
+
+#pihckle-art {
+    width: 190px;
+    top: 35%;
+    left: 80%;
+}

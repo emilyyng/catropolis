@@ -97,3 +97,19 @@ th:nth-child(1) { width: 15%; }
 th:nth-child(2) { width: 23%; }
 th:nth-child(3) { width: 22%; }
 th:nth-child(4) { width: 40%; }
+
+
+
+
+/* cat art */
+#pinkyup-art {
+    width: 200px;
+    top: 47%;
+    left: 5%;
+}
+
+#screaming-art {
+    width: 190px;
+    top: 18%;
+    left: 81%;
+}

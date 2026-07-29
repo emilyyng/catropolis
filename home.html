@@ -18,6 +18,8 @@
         <title>home | catropolis</title>
     </head>
     <body>
+        <audio id="meowAudio" src="./meow.mp3"></audio>
+        <div id="overlay"></div>
         <!-- nav bar -->
         <nav>
             <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
@@ -40,10 +42,19 @@
             <button>meet our cats &#8594;</button>
         </div>
 
+        <!-- art -->
+            <div id="cat-art">
+                <!-- <img class="cat-art" id="fatty-art" src="./images/art/fatty.png" alt="fat cat art"/> -->
+                <img class="cat-art" id="fih-art" onClick="playMeow()" src="./images/art/fih.png" alt="kitty with fish art"/>
+                <img class="cat-art" id="loafed-art" onClick="playMeow()" src="./images/art/loafed.png" alt="two cats loafing art"/>
+                <img class="cat-art" id="orange-lick-art" onClick="playMeow()" src="./images/art/orange_lick.png" alt="orange cat licking art"/>
+                <!-- <img class="cat-art" id="pihckle-art" src="./images/art/pihckle.png" alt="cat with three pickles art"/> -->
+            </div>
+
         <!-- main content -->
         <main>
             <!-- about us section -->
-            <div id="about">
+            <div id="about" class="revealable">
                 <div id="about-text">
                     <h2>about us</h2>
                     <p>
@@ -84,7 +95,7 @@
                 </div>
             </div>
 
-            <div id="meet-cats">
+            <div id="meet-cats" class="revealable">
                 <h2>meet the cats</h2>
                 <p>
                     we’re catropolis, a website dedicated to getting cats exposure in 
@@ -136,7 +147,7 @@
             </div>
 
             <!-- adopt a cat section -->
-            <div id="adopt">
+            <div id="adopt" class="revealable">
                 <img src="./images/real/ruari.jpeg" alt="beautiful orange cat"/>
                 <div id="adopt-text">
                     <h2>adopt a cat</h2>
@@ -153,7 +164,7 @@
             </div>
 
             <!-- partner with us section -->
-            <div id="partner">
+            <div id="partner" class="revealable">
                 <div id="partner-text">
                     <h2>partner with us</h2>
                     <p>
@@ -184,7 +195,7 @@
             </div>
 
             <!-- our shelters section -->
-            <div id="our-shelters">
+            <div id="our-shelters" class="revealable">
                 <h2>our shelters</h2>
                 <p>adopt, don't shop! here are the shelters we partner with.</p>
                 <div id="shelter-carousel">

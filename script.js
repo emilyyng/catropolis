@@ -1,3 +1,8 @@
+function playMeow() {
+  const audio = document.getElementById("meowAudio");
+  audio.play(); // Triggers the audio playback
+}
+
 // ==========================================
 // HELPER FUNCTIONS & MODAL LOGIC
 // ==========================================
@@ -72,18 +77,39 @@ function openProfile(cat) {
 
     // 3. Display modal by adding the open class
     profileModal.classList.add("open");
+    showOverlay();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("close-profile");
     const profileModal = document.getElementById("cat-profile");
+    const overlay = document.getElementById("overlay");
 
     if (closeBtn && profileModal) {
         closeBtn.addEventListener("click", () => {
         profileModal.classList.remove("open");
+        hideOverlay();
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", () => {
+            if (profileModal) profileModal.classList.remove("open");
+            hideOverlay();
         });
     }
 });
+
+// Helper functions to dim/undim background
+function showOverlay() {
+    const overlay = document.getElementById("overlay");
+    if (overlay) overlay.classList.add("active");
+}
+
+function hideOverlay() {
+    const overlay = document.getElementById("overlay");
+    if (overlay) overlay.classList.remove("active");
+}
 
 
 // ==========================================
@@ -303,11 +329,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("close-register");
     const submitBtn = document.getElementById("submit-btn");
     const form = document.getElementById("register-form");
+    const overlay = document.getElementById("overlay");
 
     // 1. Open Modal when clicking "Get Started" in Partner section
     if (getStartedBtn && registerModal) {
         getStartedBtn.addEventListener("click", () => {
             registerModal.classList.add("open");
+            showOverlay();
         });
     }
 
@@ -315,6 +343,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (closeBtn && registerModal) {
         closeBtn.addEventListener("click", () => {
             registerModal.classList.remove("open");
+            hideOverlay();
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", () => {
+            if (registerModal) registerModal.classList.remove("open");
+            hideOverlay();
         });
     }
 
@@ -376,6 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         popup.classList.add("hidden");
                         if (registerModal) {
                             registerModal.classList.remove("open");
+                            hideOverlay();
                         }
                     }, 2500);
                 } else if (registerModal) {
@@ -385,4 +422,53 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+});
+
+// ==========================================
+// 6. SCROLL ANIMATION
+// ==========================================
+
+// let revealableContainers = document.querySelectorAll(".revealable");
+
+// const reveal = () => {
+//     for (let i = 0; i < revealableContainers.length; i++) {
+//         let current = revealableContainers[i];
+
+//         // Get current height of container and window
+//         let windowHeight = window.innerHeight;
+//         let topOfRevealableContainer = current.getBoundingClientRect().top;
+//         let revealDistance = parseInt(getComputedStyle(current).getPropertyValue('--reveal-distance'), 10);
+
+//         // If the container is within range, add the 'active' class to reveal
+//         if (topOfRevealableContainer < windowHeight - revealDistance) {
+//             current.classList.add("active-scroll");
+//         }
+//         // If the container is not within range, hide it by removing the 'active' class
+//         else { 
+//             current.classList.remove("active-scroll");
+//         }
+//     }
+// }
+
+// window.addEventListener('scroll', reveal);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class when element enters viewport
+                entry.target.classList.add('active-scroll');
+            } else {
+                // Remove class when element leaves viewport
+                entry.target.classList.remove('active-scroll');
+            }
+        });
+    }, {
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.revealable').forEach(el => {
+        revealObserver.observe(el);
+    });
 });
