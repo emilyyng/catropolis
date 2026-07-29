@@ -40,4 +40,11 @@ function removeFavorite(catName) {
   let favorites = JSON.parse(localStorage.getItem("favoriteCats")) || [];
   favorites = favorites.filter(cat => cat.name !== catName);
   localStorage.setItem("favoriteCats", JSON.stringify(favorites));
+
+  const container = document.getElementById("fav-cats");
+
+  if (favorites.length === 0) {
+    container.innerHTML = "<p id='no-favorites'>no favorites added yet!</p>";
+    return;
+  }
 }

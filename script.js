@@ -5,6 +5,7 @@
 // Save a cat object to localStorage
 function saveToFavorites(cat) {
     let favorites = JSON.parse(localStorage.getItem("favoriteCats")) || [];
+
     const exists = favorites.some(fav => fav.name === cat.name);
 
     if (!exists) {
