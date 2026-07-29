@@ -2,12 +2,16 @@ body {
     display: grid;
     place-items: center;
 }
+
 #main {
     background-color: var(--color-card);
     padding: 50px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     width: 70%;
+    
+    position: relative;
+    z-index: 2;
 }
 
 #adoption-form {

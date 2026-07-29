@@ -108,6 +108,23 @@ a {
     color: var(--color-link)
 }
 
+#cat-signal {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 1600px;
+    height: 630px;
+    z-index: 1;
+
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+    animation-name: fade-out;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root);
+    animation-range: exit 0% exit 20%; 
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -118,6 +135,7 @@ a {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: 30px;
+    cursor: pointer;
 }
 
 .card img {
@@ -153,6 +171,79 @@ a {
     width: 100%; 
     border: 0.5px solid gray;
     margin: 0;
+}
+
+#cat-profile {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    width: 60vw;
+    max-height: 75vh;
+    overflow-y: auto;
+
+    background-color: var(--color-card);
+    padding: 100px 50px 50px 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+}
+
+#cat-profile.open {
+  display: flex; 
+}
+
+#cat-profile #bar {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+    background-color: var(--color-border);
+}
+
+#close-profile {
+    position: fixed;
+    z-index: 20;
+    top: 15px;
+    left: 15px;
+    background-color: rgb(234, 91, 115);
+    border-radius: 50px;
+    border: none;
+    padding: 7px 12px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#profile-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 50px;
+}
+
+#profile-content h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+#cat-profile img {
+    min-width: 100px;
+    width: 90%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+#profile-btns {
+    position: fixed;
+    top: 85%;
+    display: flex;
+    gap: 25px;
 }
 
 footer {
