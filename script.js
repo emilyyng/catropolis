@@ -32,7 +32,7 @@ function openProfile(cat) {
         profileImg.alt = cat.name;
     }
 
-    const catNameHeader = profileModal.querySelector("#profile-content h1");
+    const catNameHeader = profileModal.querySelector("#profile-content h2");
     if (catNameHeader) {
         catNameHeader.textContent = cat.name;
     }
