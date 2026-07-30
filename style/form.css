@@ -12,6 +12,8 @@ body {
     
     position: relative;
     z-index: 2;
+
+    /* display: none; */
 }
 
 #adoption-form {
@@ -42,4 +44,56 @@ form input, form select {
 
 .sub-confirmation {
     top: 50px;
+}
+
+/* zzzing cat */
+#snoozing-cat {
+    position: absolute;
+    top: 610px;
+    left: 63%;
+    height: 100px;
+}
+
+/* fishing cat */
+#fishing-cat {
+    position: absolute;
+    top: 50px;
+    left: 2%;
+    z-index: 7;
+}
+
+#catfish {
+    position: relative;
+    height: 300px;
+}
+
+.fihsh {
+    position: relative;
+    z-index: 8;
+    animation: flipping 1.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+#fishy1 {
+    height: 25px;
+    top: -175px;
+    left: -275px;
+    animation-delay: 0.3s
+}
+
+#fishy2 {
+    height: 60px;
+    top: -80px;
+    left: -275px;
+    animation-delay: 0s;
+}
+
+
+@keyframes flipping {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
 }

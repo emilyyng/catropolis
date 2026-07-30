@@ -18,6 +18,7 @@
         <title>favorites | catropolis</title>
     </head>
     <body>
+        <div id="overlay"></div>
         <audio id="meowAudio" src="./meow.mp3"></audio>
         <nav>
             <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
@@ -40,6 +41,31 @@
             <img class="cat-art" id="triplets-art" onClick="playMeow()" src="./images/art/triplets.png" alt="three cats art"/>
         </div>
 
+        <div id="cat-profile">
+            <div id="bar">
+                <button id="close-profile">x</button>
+            </div>
+            <div id="profile-content">
+                <div>
+                    <img src="./images/real/gorjus.jpeg" alt=""/>
+                    <p><b>adoption fee</b>: $150</p>
+                    <p><b>shelter</b>: </p>
+                </div>
+                <div>
+                    <h2>catname</h2>
+                    <p><b>age</b>: </p>
+                    <p><b>sex</b>: </p>
+                    <p><b>breed</b>: </p>
+                    <p><b>comments</b>: </p>
+                    <p>no comments</p>
+                </div>
+            </div>
+            <div id="profile-btns">
+                <a href="./adoptionform.html" target="_blank"><button>adopt me!</button></a>
+                <button>+ add to favorites</button>
+            </div>
+        </div>
+
         <!-- footer -->
         <footer>
             <div id="footer-contact">
@@ -51,17 +77,23 @@
                     catropolis helps cats find their furr-ever homes. 
                     subscribe to our newsletter to get alerts about our cats. 
                 </p>
-                <a href="https://www.linkedin.com/in/emily-yang-sf"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
-                <a href="https://github.com/emilyyng"><img src="./images/github.png" alt="linkedin logo"/></a>
+                <a href="https://www.linkedin.com/in/emily-yang-sf" target="_blank"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://github.com/emilyyng" target="_blank"><img src="./images/github.png" alt="linkedin logo"/></a>
                 <hr>
                 <p>&copy; 2026 catropolis. all rights reserved.</p>
+                <div id="snoozing-cat">
+                    <img id="ft-cat" src="./images/snoozing.png" alt="cat snoozing"/>
+                    <img class="footzies" id="ft-z1" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z2" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z3" src="./images/zzz.png" alt="z"/>
+                </div>
             </div>
             <div id="footer-newsletter">
                 <h3>subscribe to our newsletter</h3>
                 <p>
                     don’t worry &mdash; we won’t sell you anything. all we want to do 
                     is make sure you’re up to date on our cats. don’t trust us? 
-                    <a>click here to see an example of what we include in our weekly 
+                    <a href="./images/newsletter.pdf" target="_blank">click here to see an example of what we include in our weekly 
                     emails.</a>
                 </p>
                 <form id="newsletter" title="newletter">
@@ -69,7 +101,7 @@
                     <input type="text" id="name">
                     <label for="email">email</label>
                     <input type="text" id="email">
-                    <button id="subscribe-btn">subscribe</button>
+                    <button type="button" id="subscribe-btn">subscribe</button>
                 </form>
                 <div id="timed-popup" class="sub-confirmation hidden">successfully subscribed to newsletter!</div>
             </div>

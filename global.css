@@ -83,6 +83,10 @@ button {
     cursor: pointer;
 }
 
+button:active {
+    box-shadow: var(--shadow) inset;
+}
+
 h1 {
     font-size: 96px;
 }
@@ -189,6 +193,30 @@ a {
     border: 0.5px solid gray;
     margin: 0;
 }
+
+.card, .carousel-card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .carousel-card:hover {
+    transform: translateY(-10px);
+}
+
+/* .card:hover, .carousel-card:hover {
+    animation: jump 0.4s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
 
 #cat-profile {
     display: none;
@@ -307,10 +335,68 @@ footer a {
     text-decoration: underline;
 }
 
+footer a:hover {
+    color: var(--color-link-hover);
+}
+
+footer a:active {
+    color: var(--color-link-active);
+}
+
 footer img {
     /* width: 100%; */
     height: 30px;
 }
+
+#snoozing-cat {
+    display: flex;
+    justify-content: center;
+}
+
+#ft-cat {
+    position: relative;
+    height: 110px;
+    z-index: 7;
+    top: 20px;
+}
+
+.footzies {
+    position: relative;
+    z-index: 8;
+    animation: smooth-bounce 1.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+#ft-z1 {
+    height: 25px;
+    top: 35px;
+    left: -110px;
+    animation-delay: 0s;
+}
+
+#ft-z2 {
+    height: 30px;
+    top: 0px;
+    left: -100px;
+    animation-delay: 0.3s
+}
+
+#ft-z3 {
+    height: 35px;
+    top: -35px;
+    left: -150px;
+    animation-delay: 0.6s;
+}
+
+@keyframes smooth-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up 12px */
+    }
+}
+
 
 footer hr {
     margin-left: 0; 

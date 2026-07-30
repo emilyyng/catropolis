@@ -54,12 +54,20 @@ h2 {
   padding-bottom: 2px;
 }
 
+#about-text a:hover {
+    color: var(--color-link-hover);
+}
+
+#about-text a:active {
+    color: var(--color-link-active);
+}
+
 #catpunzel {
     position: absolute;
-    top: 155px;
+    top: 160px;
     left: 700px;
     z-index: 1;
-    height: 1550px;
+    height: 1560px;
 }
 
 footer{

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("fav-cats");
+  if (!container) return;
 
   // Retrieve saved favorites from localStorage
   const favorites = JSON.parse(localStorage.getItem("favoriteCats")) || [];
@@ -26,10 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="remove-btn">remove favorite</button>
     `;
 
-    // Add ability to remove from favorites
-    card.querySelector(".remove-btn").addEventListener("click", () => {
+    // 1. Remove favorite button handler
+    const removeBtn = card.querySelector(".remove-btn");
+    removeBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // Stops profile modal from opening when clicking remove
       removeFavorite(cat.name);
       card.remove(); // Remove card from UI
+    });
+
+    // 2. Card click handler to open profile
+    card.addEventListener("click", () => {
+      openProfile(cat);
     });
 
     container.appendChild(card);
@@ -43,8 +51,7 @@ function removeFavorite(catName) {
 
   const container = document.getElementById("fav-cats");
 
-  if (favorites.length === 0) {
+  if (favorites.length === 0 && container) {
     container.innerHTML = "<p id='no-favorites'>no favorites added yet!</p>";
-    return;
   }
 }

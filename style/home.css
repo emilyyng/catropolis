@@ -39,9 +39,9 @@
 
 #catlouette {
     position: absolute;
-    top: 180px;
+    top: 150px;
     left: 50;
-    height: 450px;
+    /* height: 450px; */
     width: 750px;
     z-index: 2;
 }
