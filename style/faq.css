@@ -1,0 +1,115 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 200px;
+}
+
+#hero h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#hero p {
+    margin: 30px 0px;
+    /* text-align: left; */
+    font-weight: bold;
+    /* font-size: 25px; */
+}
+
+#faq {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 100px;
+}
+
+.accordion {
+    background-color: white;
+    color: var(--color-text);
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #dab494;
+    padding: 10px 15px;
+    font-weight: normal;
+    text-align: left;
+    box-shadow: none;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.4s;
+    padding: 15px 0px;
+}
+
+.accordion:hover {
+    background-color: #f9e0cc;
+}
+
+.accordion:after {
+    padding-top: 7px;
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 17px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+    font-size: 17px;
+}
+
+.panel a {
+    font-size: 17px;
+}
+
+.panel a:hover {
+    color: var(--color-link-hover);
+}
+
+.panel a:active {
+    color: var(--color-link-active);
+}
+
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th:nth-child(1) { width: 15%; }
+th:nth-child(2) { width: 23%; }
+th:nth-child(3) { width: 22%; }
+th:nth-child(4) { width: 40%; }
+
+
+
+
+/* cat art */
+#pinkyup-art {
+    width: 200px;
+    top: 47%;
+    left: 5%;
+}
+
+#screaming-art {
+    width: 190px;
+    top: 18%;
+    left: 81%;
+}

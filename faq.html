@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://googleapis.com" rel="stylesheet">
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
+
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="style/faq.css">
+        <link rel="icon" type="image/png" href="./images/favicon.png">
+
+        <title>faq | catropolis</title>
+    </head>
+    <body>
+        <audio id="meowAudio" src="./meow.mp3"></audio>
+        <nav>
+            <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
+            <ul>
+                <li><a href="./home.html">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./cats.html">meet the cats</a></li>
+                <div class="current-page"><li><a href="./faq.html">faq</a></li></div>
+                <li><a href="./favorites.html"><3</a></li>
+                <!-- <li>settings</li> -->
+            </ul>
+        </nav>
+        <div id="hero">
+            <h1>faq</h1>
+            <p>
+                we know you have questions for us, and we'd be happy to answer them.
+                we've compiled a list of our most frequently asked questions here.
+                if you can't find the answer you're looking for, contact us and we 
+                will get back to you as soon as we can.
+            </p>
+            <button>email us here &#8594;</button> 
+        </div>
+
+        <!-- art -->
+        <div id="cat-art">
+            <img class="cat-art" id="pinkyup-art" onClick="playMeow()" src="./images/art/pinkyup.png" alt="cat with leg up art"/>
+            <img class="cat-art" id="screaming-art" onClick="playMeow()" src="./images/art/screaming.png" alt="cat screaming art"/>
+        </div>
+        
+        <div id="faq">
+            <h2>faq from adopters</h2>
+            <div>
+                <h3 class="accordion">how can i adopt a cat i see on catropolis?</h3>
+                <div class="panel">
+                    <p>
+                        we have a general form to request an adoption, which you can 
+                        <a href="./adoptionform.html" target="_blank">access by clicking 
+                        here.</a> alternatively, by visiting a cat's profile, you can click 
+                        on the "adopt me!" button on that page. you can visit a cat's 
+                        profile by clicking on their card on our
+                        <a href="./cats.html">meet the cats</a> page.
+                    </p>
+                </div>
+                <h3 class="accordion">what are the adoption fees for cats on catropolis?</h3>
+                <div class="panel">
+                    <p>
+                        we are not in charge of the adoption fees for cats on catropolis. each
+                        organization has set their own adoption fees for the cats under their care.
+                        however, we want to be transparent and have included a fee breakdown below.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>life stage</th>
+                            <th>age range</th>
+                            <th>adoption fee range</th>
+                            <th>notes</th>
+                        </tr>
+                        <tr>
+                            <td>kitten</td>
+                            <td>0 months - 6 months</td>
+                            <td>$200 - $300</td>
+                            <td>
+                                some organizations encourage adoption of
+                                a second kitten for a discount
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>adult</td>
+                            <td>7 months - 7 years</td>
+                            <td>$85 - $200</td>
+                            <td>
+                                some bonded pairs may come at a discount
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>senior</td>
+                            <td>8 years and up</td>
+                            <td>$50 - $75</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p>
+                        while we do list the adoption fee on a cats profile, we encourage you to 
+                        contact the organization listed in a cat's profile for the most accurate and 
+                        up to date adoption fee.
+                    </p>
+                </div> 
+                <h3 class="accordion">does adding a cat to favorites put them on hold for me?</h3>
+                <div class="panel">
+                    <p>
+                        unfortunately, we do not put any cats on hold under any circumstances. 
+                        adding a cat to favorites simply makes it easier for you to come back 
+                        to that cat. however, you may contact the organization listed under a 
+                        cat's profile to inquire about holding a cat.
+                    </p>
+                </div>
+            </div>
+
+            <h2>faq from organizations</h2>
+            <div>
+                <h3 class="accordion">how do i register my organization on catropolis?</h3>
+                <div class="panel">
+                    <p>
+                        you can access the form to register your organization with us
+                        by <a href="home.html#partner">clicking this link.</a>
+                    </p>
+                </div>
+                <h3 class="accordion">how do i put my cat on catropolis?</h3>
+                <div class="panel">
+                    <p>
+                        you must first register your organization with us (which you can 
+                        do by <a href="home.html#partner">clicking this link</a>). after
+                        submitting the form, we will contact you with the next steps, which 
+                        include instructions on how to put your cat on catropolis.
+                    </p>
+                </div> 
+                <h3 class="accordion">how long will it take to get accepted as an organization</h3>
+                <div class="panel">
+                    <p>
+                        you can expect us to contact you within three business days of your 
+                        submission of the form. if you do not hear back from us after a week,
+                        please contact our team at <a>support@catropolis.com</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div id="footer-contact">
+                <div id="footer-title">
+                    <img src="./images/favicon.png" alt="orange cat"/>
+                    <h3>catropolis</h3>
+                </div>
+                <p>
+                    catropolis helps cats find their furr-ever homes. 
+                    subscribe to our newsletter to get alerts about our cats. 
+                </p>
+                <a href="https://www.linkedin.com/in/emily-yang-sf" target="_blank"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://github.com/emilyyng" target="_blank"><img src="./images/github.png" alt="linkedin logo"/></a>
+                <hr>
+                <p>&copy; 2026 catropolis. all rights reserved.</p>
+                <div id="snoozing-cat">
+                    <img id="ft-cat" src="./images/snoozing.png" alt="cat snoozing"/>
+                    <img class="footzies" id="ft-z1" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z2" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z3" src="./images/zzz.png" alt="z"/>
+                </div>
+            </div>
+            <div id="footer-newsletter">
+                <h3>subscribe to our newsletter</h3>
+                <p>
+                    don’t worry &mdash; we won’t sell you anything. all we want to do 
+                    is make sure you’re up to date on our cats. don’t trust us? 
+                    <a href="./images/newsletter.pdf" target="_blank">click here to see an example of what we include in our weekly 
+                    emails.</a>
+                </p>
+                <form id="newsletter" title="newletter">
+                    <label for="name">name</label>
+                    <input type="text" id="name">
+                    <label for="email">email</label>
+                    <input type="text" id="email">
+                    <button type="button" id="subscribe-btn">subscribe</button>
+                </form>
+                <div id="timed-popup" class="sub-confirmation hidden">successfully subscribed to newsletter!</div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+    </body>
+</html>
