@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://googleapis.com" rel="stylesheet">
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
+
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="style/about.css">
+        <link rel="icon" type="image/png" href="./images/favicon.png">
+
+        <title>about | catropolis</title>
+    </head>
+    <body>
+        <nav>
+            <a href="home.html"><img src="./images/favicon.png" alt="orange cat as logo" height="75px"/></a>
+            <ul>
+                <li><a href="./home.html">home</a></li>
+                <div class="current-page"><li><a href="./about.html">about</a></li></div>
+                <li><a href="./cats.html">meet the cats</a></li>
+                <li><a href="./faq.html">faq</a></li>
+                <li><a href="./favorites.html"><3</a></li>
+                <!-- <li>settings</li> -->
+            </ul>
+        </nav>
+        <div id="main-about">
+            <div id="about-text">
+                <h1>about</h1>
+                <p id="subheading">learn more about catropolis!</p>
+                <h2>who we are</h2>
+                <p>
+                    we’re catropolis. our name comes from combining the words "cat"
+                    and "metropolis." metropolis in this case comes from the dc universe,
+                    and is the bright and hopeful counterpart to gotham, a dark and corrupt
+                    city. we want all cats to experience the hope and joy of finding a home,
+                    which is why we created this website and named ourselves "catropolis."
+                </p>
+                <h2>what we do</h2>
+                <p>
+                    we help cats get adopted by providing a platform for shelters to spread 
+                    awareness for cats under their care that need a home. we have tools to 
+                    make the adoption process easier and as low-stress as we can. we encourage
+                    users to <a href="#footer-newsletter">subscribe to our newsletter</a> to 
+                    stay in the know about cats new to the platform and cats that are still 
+                    waiting to go home.
+                </p>
+                <p>questions? navigate to <a href="./faq.html">our faq page</a> to find an answer</p>
+                <h2>features we'd love to add to the website</h2>
+                <ul>
+                    <li>incorporation of accounts for shelters and those looking to adopt</li>
+                    <li>mobile compatibility</li>
+                    <li>animations of cats instead of only pictures</li>
+                    <li>a cat game (as an easter egg)</li>
+                </ul>
+                <h2>fun facts the creator loves about cats</h2>
+                <ul>
+                    <li>if you're allergic to a cat, you're allergic to their saliva, not their fur</li>
+                    <li>cats are programmed to know how to use a litter box (no training needed!)</li>
+                    <li>cats only meow at humans, since they don't need to meow at other cats to communicate</li>
+                    <li>if their head fits, their whole body fits because they don't have shoulders! (unless they're chonk)</li>
+                </ul>
+            </div>
+            <img src="./images/catpunzel_cropped.png" alt="cat hanging from rapunzel tower" id="catpunzel"/>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div id="footer-contact">
+                <div id="footer-title">
+                    <img src="./images/favicon.png" alt="orange cat"/>
+                    <h3>catropolis</h3>
+                </div>
+                <p>
+                    catropolis helps cats find their furr-ever homes. 
+                    subscribe to our newsletter to get alerts about our cats. 
+                </p>
+                <a href="https://www.linkedin.com/in/emily-yang-sf" target="_blank"><img src="./images/linkedin.svg" alt="linkedin logo"/></a>
+                <a href="https://github.com/emilyyng" target="_blank"><img src="./images/github.png" alt="linkedin logo"/></a>
+                <hr>
+                <p>&copy; 2026 catropolis. all rights reserved.</p>
+                <div id="snoozing-cat">
+                    <img id="ft-cat" src="./images/snoozing.png" alt="cat snoozing"/>
+                    <img class="footzies" id="ft-z1" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z2" src="./images/zzz.png" alt="z"/>
+                    <img class="footzies" id="ft-z3" src="./images/zzz.png" alt="z"/>
+                </div>
+            </div>
+            <div id="footer-newsletter">
+                <h3>subscribe to our newsletter</h3>
+                <p>
+                    don’t worry &mdash; we won’t sell you anything. all we want to do 
+                    is make sure you’re up to date on our cats. don’t trust us? 
+                    <a href="./images/newsletter.pdf" target="_blank">click here to see an example of what we include in our weekly 
+                    emails.</a>
+                </p>
+                <form id="newsletter" title="newletter">
+                    <label for="name">name</label>
+                    <input type="text" id="name">
+                    <label for="email">email</label>
+                    <input type="text" id="email">
+                    <button type="button" id="subscribe-btn">subscribe</button>
+                </form>
+                <div id="timed-popup" class="sub-confirmation hidden">successfully subscribed to newsletter!</div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+    </body>
+</html>

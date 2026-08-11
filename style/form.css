@@ -1,0 +1,99 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+#main {
+    background-color: var(--color-card);
+    padding: 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 70%;
+    
+    position: relative;
+    z-index: 2;
+
+    /* display: none; */
+}
+
+#adoption-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 54px;
+    text-align: center;
+}
+
+form input, form select {
+    width: 70%;
+    height: 2rem;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(152, 152, 152);
+    padding-left: 10px;
+}
+
+/* footer form button {
+    margin-top: 20px;
+    font-size: 15px;
+} */
+
+.sub-confirmation {
+    top: 50px;
+}
+
+/* zzzing cat */
+#snoozing-cat {
+    position: absolute;
+    top: 610px;
+    left: 63%;
+    height: 100px;
+}
+
+/* fishing cat */
+#fishing-cat {
+    position: absolute;
+    top: 50px;
+    left: 2%;
+    z-index: 7;
+}
+
+#catfish {
+    position: relative;
+    height: 300px;
+}
+
+.fihsh {
+    position: relative;
+    z-index: 8;
+    animation: flipping 1.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+#fishy1 {
+    height: 25px;
+    top: -175px;
+    left: -275px;
+    animation-delay: 0.3s
+}
+
+#fishy2 {
+    height: 60px;
+    top: -80px;
+    left: -275px;
+    animation-delay: 0s;
+}
+
+
+@keyframes flipping {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
