@@ -10,7 +10,7 @@ Browse, meet, and "adopt" a cat!
 - CSS
 - JavaScript
 
-Roadmap / Stretch Features
+**Roadmap / Stretch Features**
 1. Add filtering/search by cat traits
 2. Persist adopted cats (localStorage or backend)
 3. Animations/transitions
