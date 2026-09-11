@@ -1,8 +1,8 @@
 # 😽 catropolis
 final project for code tl - mock business website
----
-### Browse, meet, and "adopt" a cat!
 
+### Browse, meet, and "adopt" a cat!
+---
 **Live site**: [catropolis](https://emilyyng.github.io/catropolis/)
 
 **Built With**
