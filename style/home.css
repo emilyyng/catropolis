@@ -62,7 +62,7 @@
     gap: 10px;
 }
 
-#about img, #adopt img, #partner img {
+#abt-img, #adopt-img, #partner-img {
     width: 250px;
     height: 100%;
     border-radius: var(--border-radius);
@@ -278,18 +278,18 @@
 /* cat drawings */
 #fih-art {
     width: 170px;
-    top: 145%;
-    left: 5%;
+    top: 118%;
+    left: -7%;
 }
 
 #loafed-art {
     width: 200px;
-    top: 250%;
-    left: 80%;
+    top: -40%;
+    left: 90%;
 }
 
 #orange-lick-art {
     width: 200px;
-    top: 370%;
-    left: 60%;
+    top: 115%;
+    left: 70%;
 }
