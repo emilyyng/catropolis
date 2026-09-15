@@ -1,5 +1,6 @@
 body {
      overflow-x: hidden;
+     position: relative;
 }
 
 h1 {
@@ -64,8 +65,8 @@ h2 {
 
 #catpunzel {
     position: absolute;
-    top: 160px;
-    left: 700px;
+    bottom: -50px;
+    left: 55%;
     z-index: 1;
     height: 1560px;
 }

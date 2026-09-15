@@ -104,12 +104,12 @@ th:nth-child(4) { width: 40%; }
 /* cat art */
 #pinkyup-art {
     width: 200px;
-    top: 47%;
+    top: 350px;
     left: 5%;
 }
 
 #screaming-art {
     width: 190px;
-    top: 18%;
+    top: 100px;
     left: 81%;
 }
